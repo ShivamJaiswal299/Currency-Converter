@@ -1,0 +1,272 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: -2;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.3); 
+
+  z-index: -1;
+}
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 40px 20px; */
+}
+
+h1 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 8vmin;      
+  color: white;
+  letter-spacing: 0.5vmin;
+  margin-bottom: 36px;
+  text-shadow: 0 0 40px rgb(250, 253, 255);
+  transition: 0.5s ease-out;
+}
+h1:hover{
+    font-size: 7vmin;
+}
+
+.card {
+  width: 100%;
+  max-width: 560px;         
+  padding: 32px 28px;
+  border-radius: 28px;   
+
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(24px);
+
+  box-shadow: 0 0 32px rgba(255, 255, 255, 0.8);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.025) translateY(-4px); 
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.8);
+}
+
+.input-style{
+    background: rgba(255, 255, 255, 0.07);
+  border: 1.5px solid  rgba(255, 255, 255, 0.4);   
+  border-radius: 18px;
+  padding: 15px;
+  margin-bottom: 16px;            
+  width: 100%;
+  max-width: 500px; 
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+
+  color: rgb(0, 255, 64);   
+
+  font-family: sans-serif;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+
+  cursor: pointer;
+  outline: none;
+
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.flagIMG{
+  position: absolute;
+  transform: translate(10px,-18px);
+}
+.section-amount {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1.5px solid  rgba(255, 255, 255, 0.4);   
+  border-radius: 18px;
+  padding: 15px;
+  margin-bottom: 16px;            
+
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.section-amount:hover {
+  transform: scale(1.035) translateY(-3px);   
+  background: rgba(79, 195, 247, 0.09);      
+    border: 1.5px solid rgba(255, 255, 255, 0.8);   
+  box-shadow: 0 0 32px rgba(255, 255, 255, 0.3), 0 8px 28px rgba(0, 0, 0, 0.3);
+}
+.section-from {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1.5px solid  rgba(255, 255, 255, 0.4);   
+  border-radius: 18px;
+  padding: 15px;
+  margin-bottom: 16px;            
+
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.section-from:hover {
+  transform: scale(1.035) translateY(-3px);   
+  background: rgba(79, 195, 247, 0.09);      
+    border: 1.5px solid rgba(255, 255, 255, 0.8);   
+  box-shadow: 0 0 32px rgba(255, 255, 255, 0.3), 0 8px 28px rgba(0, 0, 0, 0.3);
+}
+.section-to {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1.5px solid  rgba(255, 255, 255, 0.4);   
+  border-radius: 18px;
+  padding: 15px;
+  margin-bottom: 16px;            
+
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.section-to:hover {
+  transform: scale(1.035) translateY(-3px);   
+  background: rgba(79, 195, 247, 0.09);      
+    border: 1.5px solid rgba(255, 255, 255, 0.8);   
+  box-shadow: 0 0 32px rgba(255, 255, 255, 0.3), 0 8px 28px rgba(0, 0, 0, 0.3);
+}
+
+.section-label {
+  font-family: 'Caveat', cursive;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e8eaf6;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+}
+
+select {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.4);   
+
+  font-family: 'Caveat', cursive;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+
+  cursor: pointer;
+  outline: none;
+
+  transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
+
+  appearance: none;
+  
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+select:focus {
+  border-color: #fafafa;
+  background-color: rgba(79, 247, 104, 0.06);
+  box-shadow: 0 0 0 3px rgba(49, 248, 102, 0.12);
+  color: rgb(0, 255, 64);   
+
+}
+
+select option {
+  background: #28462c;
+  color: rgb(0, 255, 64);   
+}
+
+
+.btn {
+  display: block;
+  width: 70%;                 
+  margin: 24px auto 0;          
+  padding: 16px 0;
+
+  background: transparent;
+  border: 2px solid rgb(0, 255, 64);   
+;    
+  border-radius: 14px;
+   color: rgb(0, 255, 64);   
+            
+
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(105, 240, 174, 0.15);
+
+  transition: background 0.25s, box-shadow 0.25s, transform 0.15s;
+}
+
+.btn:hover {
+  background: rgba(105, 240, 174, 0.1);
+  box-shadow: 0 0 32px rgba(0, 255, 64, 0.644);   
+;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.divider {
+  width: 60%;
+  height: 1px;
+  margin: 24px auto 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+}
+
+
+
+.result {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.result-main {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  color: #4fc3f7;          
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.result-rate {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2.35rem;
+  color: #33ff00;      
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 28px rgba(77, 255, 0, 1);
+  
+}

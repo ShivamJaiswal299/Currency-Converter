@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <video autoplay muted loop id="bg-video">
+      <source src="bgvideomoney.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <h1>CURRENCY CONVERTOR</h1>
+    <div class="card">
+        <div class="section-from">
+            <div class="section-label">From<img src="" class="flagIMG"></div>
+            <select id="from-currency">
+                <option value="" disabled selected>eg USD</option>
+
+            </select>
+        </div>
+        
+        <div class="section-to">
+            <div class="section-label">To<img src="" class="flagIMG"></div>
+            <select id="to-currency">
+                <option value="" disabled selected>eg INR</option>
+
+            </select>
+        </div>
+        <div class="section-amount">
+          <div class="section-label">Enter the amount</div>
+          <input type="text" class="input-style">
+        </div>
+        
+        
+        <div class="result">
+          <div class="result-rate"  id="result-rate"></div>
+        </div>
+        <div class="divider"></div>
+        <button class="btn" id="convert-btn">Get Exchange Rate</button>
+
+  </div>
+  <script src="codes.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
